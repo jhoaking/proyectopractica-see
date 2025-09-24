@@ -11,7 +11,8 @@ async function bootstrap() {
       forbidNonWhitelisted: true,
     }),
   );
-
+console.log('DB_USER:', process.env.DB_USER);
+console.log('DB_PASSWORD:', process.env.DB_PASSWORD);
   await app.listen(process.env.PORT ?? 3000);
 }
 bootstrap();

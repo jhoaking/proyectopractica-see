@@ -13,8 +13,10 @@ export class NotificationsService {
   ) {}
 
   async create(createNotificationDto: CreateNotificationDto) {
+
     try {
       const notification = this.notificationRepository.create(
+        
         createNotificationDto,
       );
       await this.notificationRepository.save(notification);
